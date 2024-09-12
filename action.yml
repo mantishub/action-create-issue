@@ -1,0 +1,29 @@
+name: "Create MantisHub Issue"
+description: "An action to create issue in MantisHub"
+
+inputs:
+  url:
+    description: "Base URL of the MantisHub API"
+    required: true
+  api-key:
+    description: "API key for authentication"
+    required: true
+  project:
+    description: "Project Name"
+    required: true
+  summary:
+    description: "Summary of the issue"
+    required: true
+  description:
+    description: "Description of the issue"
+    required: true
+  category:
+    description: "Category of the issue"
+    required: true
+
+outputs:
+  issue-id:
+    description: "The ID of the created issue."
+runs:
+  using: "node20"
+  main: "index.js"
