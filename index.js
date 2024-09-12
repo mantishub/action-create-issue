@@ -107,7 +107,6 @@ async function createIssue(body) {
  */
 function validateInput(params) {
     const result = {};
-    console.log(params)
     // Validate and set the 'name' parameter (required and must be a string)
     if (typeof params.summary === 'string' && params.summary.trim() !== '') {
         result.summary = params.summary.trim();
