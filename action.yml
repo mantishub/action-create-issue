@@ -1,5 +1,5 @@
 name: "Create MantisHub Issue"
-description: "An action to create issue in MantisHub"
+description: "An action to create an issue in MantisHub"
 
 inputs:
   url:
@@ -24,6 +24,7 @@ inputs:
 outputs:
   issue-id:
     description: "The ID of the created issue."
+
 runs:
   using: "node20"
   main: "index.js"

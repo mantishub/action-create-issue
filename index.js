@@ -1,3 +1,9 @@
+/**************************************************************************
+ MantisHub GitHub Actions
+ Copyright (c) MantisHub - Victor Boctor
+ All rights reserved.
+ **************************************************************************/
+
 const https = require('https');
 
 /**
@@ -14,12 +20,12 @@ const params = {
 
 /**
  * Main function
- *
  */
 async function run() {
     if (!params.url || !params.apiKey || !params.project) {
-        throw new Error("Project name, url and api-key  inputs are required.");
+        throw new Error("Project name, url and api-key inputs are required.");
     }
+
     const newIssue = await createNewIssue(params);
     console.log(`::set-output name=issue-id::${newIssue.issue.id}`);
     return newIssue.issue.id;
